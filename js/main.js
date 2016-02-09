@@ -41,6 +41,12 @@ $(document).ready(function(){
             "margin-top": -1*backHeight/2
         });
         radius = myWidth*250/1920;
+
+        $(".b-about-slide p").css("font-size",(myWidth>1600)?23:18);
+        $(".b-about-slide p").css("line-height",(myWidth>1600)?"36px":"30px");
+        // var min_height = (myHeight < 500)?500:myHeight;
+        // $(".b-what-we-do-2,.b-what-we-do-3").css("height", min_height);
+        // $(".b-work").css("min-height", min_height);
     }
     $(window).resize(resize);
     resize();
@@ -119,6 +125,12 @@ $(document).ready(function(){
                 transition($this, 0.5);
             }
         });
+    });
+
+    $(".b-callback input[type='text']").focus(function(){
+        $(this).parent(".b-input").addClass("focus");
+    }).blur(function(){
+        $(this).parent(".b-input").removeClass("focus");    
     });
 
     function transition(el,dur){

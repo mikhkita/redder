@@ -128,10 +128,21 @@ b{
 	margin-left: -600px;
 }
 input::-webkit-input-placeholder {
-	color: #434343;
+	color: #969696;
 }
 input:-moz-placeholder {
-	color: #434343;
+	color: #969696;
+}
+.b-icon{
+	position: relative;
+}
+.b-icon:before{
+	background-repeat: no-repeat;
+	background-image: url('../i/sprite.png');
+	background-size: 163px;
+	position: absolute;
+	content: "s";
+	font-size: 0px;
 }
 .b-orange-butt{
 
@@ -204,16 +215,11 @@ input:-moz-placeholder {
 
 				}
 				.b-main-slide .b-head .b-number:before{
-					position: absolute;
-					content: "s";
-					font-size: 0px;
 					width: 15px;
 					height: 17px;
 					left: -20px;
 					top: 2px;
-					background-position: 50% 50%;
-					background-repeat: no-repeat;
-					background-image: url('../i/phone.png');
+					background-position: -98px -1px;
 				}
 			.b-main-slide .b-head .b-top-buttons{
 
@@ -229,31 +235,21 @@ input:-moz-placeholder {
 					
 				}
 					.b-main-slide .b-head .b-top-buttons a.b-callback-butt:before{
-						position: absolute;
-						content: "s";
-						font-size: 0px;
 						width: 22px;
 						height: 15px;
 						left: 0px;
 						top: 2px;
-						background-position: 50% 50%;
-						background-repeat: no-repeat;
-						background-image: url('../i/message.png');
+						background-position: -22px -1px;
 					}
 				.b-main-slide .b-head .b-top-buttons a.b-menu-butt{
 					
 				}
 					.b-main-slide .b-head .b-top-buttons a.b-menu-butt:before{
-						position: absolute;
-						content: "s";
-						font-size: 0px;
 						width: 19px;
 						height: 15px;
 						left: 2px;
 						top: 2px;
-						background-position: 50% 50%;
-						background-repeat: no-repeat;
-						background-image: url('../i/burger.png');
+						background-position: -1px -1px;
 					}
 		.b-main-slide .b-big-logo{
 			display: inline-block;
@@ -269,9 +265,6 @@ input:-moz-placeholder {
 			height: 292px;
 		}
 		.b-main-slide .b-scroll-down{
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-			background-image: url('../i/scroll.png');
 			width: 20px;
 			height: 58px;
 			position: absolute;
@@ -279,6 +272,13 @@ input:-moz-placeholder {
 			margin-left: -10px;
 			bottom: 30px;
 		}
+			.b-main-slide .b-scroll-down:before{
+				background-position: -141px 0px;
+				width: 22px;
+				height: 61px;
+				left: 0px;
+				top: 0px;
+			}
 h2.b-title{
 	font-size: 40px;
 	line-height: 30px;
@@ -294,13 +294,13 @@ h2.b-title{
 		height: 3px;
 		left: 50%;
 		margin-left: -95px;
-		bottom: -43px;
+		bottom: -45px;
 		background-color: #ff5c54;
 	}
 .b-about-slide{
 	padding-bottom: 0px;
 	background-color: #FFF;
-	height: 300px;
+	height: 230px;
 }
 	.b-about-slide .b-block{
 		z-index: 10;
@@ -332,6 +332,9 @@ h2.b-title{
 .half{
 	width: 50%;
 	position: relative;
+}
+.b-what-we-do{
+	overflow: hidden;
 }
 .b-what-we-do-1{
 	min-height: 750px;
@@ -405,6 +408,30 @@ h2.b-title{
 		font-family: "proxima_nova_light";
 		margin-bottom: 50px;
 	}
+	.b-what-block ul{
+		margin-bottom: 50px;
+	}
+		.b-what-block ul li{
+			position: relative;
+			font-size: 18px;
+			line-height: 28px;
+			margin-left: 30px;
+			font-family: "proxima_nova_light";
+		}
+			.b-what-block ul li:before{
+				position: absolute;
+				content: "s";
+				font-size: 0px;
+				width: 8px;
+				height: 8px;
+				left: -30px;
+				top: 9px;
+				background-color: #ff5c54;
+				border-radius: 10px;
+			}
+			.b-what-block ul li.b-without-dot:before{
+				display: none;
+			}
 a.b-orange-butt{
 	border-radius: 50px;
 	border: 2px solid #ff5c54;
@@ -422,14 +449,14 @@ a.b-orange-butt{
 }
 		.b-what-we-do-1 .b-what-block{
 			margin-bottom: 100px;
-			margin-top: 85px;
+			margin-top: 45px;
 		}
 .b-what-we-do-2{
 	background-color: #f5f5f5;
 	min-height: 615px;
 }
 	.b-what-we-do-2 .b-what-block{
-		margin-top: 110px;
+		margin-top: 125px;
 	}
 		.b-what-we-do-2 .b-what-num.b-what-num-2{
 			background-image: url('../i/num-2.png');
@@ -445,6 +472,7 @@ a.b-orange-butt{
 		position: absolute;
 		left: 0px;
 		top: -61px;
+		z-index: 10;
 	}
 .b-what-we-do-3{
 	height: 643px;
@@ -460,7 +488,7 @@ a.b-orange-butt{
 		top: 0px;
 	}
 	.b-what-we-do-3 .b-what-block{
-		margin-top: 140px;
+		margin-top: 110px;
 	}
 	.b-what-we-do-3 .b-what-num-3{
 		background-image: url('../i/num-3.png');
@@ -606,18 +634,78 @@ a.b-orange-butt{
 						}
 .b-callback{
 	padding: 80px 0px;
+	background-color: #f9f9f9;
 }
 	.b-callback h2.b-title{
 
 	}
 		.b-callback .b-callback-form{
-
+			display: inline-block;
 		}
+		.b-callback .b-input{
+			display: block;
+			margin-bottom: 35px;
+			padding: 0px 2px;
+		}
+			.b-callback .b-input:after{
+				position: absolute;
+				content: "s";
+				font-size: 0px;
+				width: 1px;
+				height: 33px;
+				left: 50px;
+				top: 11px;
+				background-color: #cccccc;
+				-webkit-transition: all 150ms ease-out;
+				   -moz-transition: all 150ms ease-out;
+				    -ms-transition: all 150ms ease-out;
+				   	 -o-transition: all 150ms ease-out;
+						transition: all 150ms ease-out;
+			}
+			.b-callback .b-input.focus:after{
+				background-color: #ff5c54;
+			}
+			.b-callback .b-input.b-name-input:before{
+				background-position: -74px -1px;
+				left: 16px;
+				top: 15px;
+				width: 22px;
+				height: 26px;
+			}
+			.b-callback .b-input.b-email-input:before{
+				background-position: -46px -1px;
+				left: 14px;
+				top: 19px;
+				width: 26px;
+				height: 18px;
+			}
+			.b-callback .b-input.b-phone-input:before{
+				background-position: -115px -1px;
+				left: 15px;
+				top: 15px;
+				width: 25px;
+				height: 25px;
+			}
 		.b-callback input[type="text"]{
-
+			display: block;
+			padding: 16px 20px 16px 60px;
+			width: 280px;
+			border-radius: 5px;
+			border: 1px solid #cccccc;
+			font-size: 18px;
+			color: #262626;
+			font-family: "proxima_nova_light";
+			-webkit-transition: all 150ms ease-out;
+			   -moz-transition: all 150ms ease-out;
+			    -ms-transition: all 150ms ease-out;
+			   	 -o-transition: all 150ms ease-out;
+					transition: all 150ms ease-out;
+		}
+		.b-callback	.focus input[type="text"]{
+			/*border-color: #ff5c54;*/
 		}
 		.b-callback a.b-orange-butt{
-
+			padding: 16px 70px 16px 70px;
 		}
 .b-footer{
 	background-color: #252525;
@@ -642,16 +730,11 @@ a.b-orange-butt{
 				display: inline-block;
 			}
 				.b-footer .right a.b-footer-phone:before{
-					position: absolute;
-					content: "s";
-					font-size: 0px;
 					width: 15px;
 					height: 17px;
 					left: -20px;
 					top: 2px;
-					background-position: 50% 50%;
-					background-repeat: no-repeat;
-					background-image: url('../i/phone.png');
+					background-position: -98px -1px;
 				}
 			.b-footer .right a.b-up-button{
 				font-family: "proxima_nova_bold";
@@ -678,7 +761,11 @@ a.b-orange-butt{
 
 
 
-	
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	.b-icon:before{
+		background-image: url('../i/sprite@2x.png');
+	}
+}
 @media screen and (max-width: 1250px){
 	
 }
