@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 		function whenScroll(){
 			var scroll = ((document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop)+myHeight;
+			// console.log(scroll);
 			$(".anim").each(function(){
 				var tmp = ( $(this).attr("data-cont") )?$($(this).attr("data-cont")):$(this),
 					offset = ( tmp.attr("data-offset") )?tmp.attr("data-offset"):tmp.height()/2;
@@ -43,21 +44,12 @@ $(document).ready(function(){
 	  	$(window).resize(resize);
 	  	resize();
 	  	$(window).scroll(whenScroll);
-		whenScroll();
+		// whenScroll();
 	// }
 
-	// Кастомные функции
-	custom['upPercent'] = function(el){
-		var num = el.attr("data-num")*1,
-			out = el.find(".b-proc-text span"),
-			dur = 1000,
-			timer,
-			now = out.html()*1;
-		timer = setInterval(function(){
-			now++
-			out.html(now);
-			if( now >= num ) clearInterval(timer);
-		},dur/(num-now));
-	}
+	// // Кастомные функции
+	// custom['we-do-1'] = function(el){
+	// 	alert();
+	// }
 
 });
