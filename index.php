@@ -20,14 +20,14 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css" />
-	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/layout-desktop.css" />
+	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1023px)" href="css/layout-tablet.css" />
 
 	<meta name="format-detection" content="telephone=no">
 
 	<? if( $mobile ): ?>
 		<meta name="viewport" content="width=750, user-scalable=no">
 	<? else: ?>
-		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="viewport" content="width=1000, user-scalable=no">
 	<? endif; ?>
 
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
@@ -1030,7 +1030,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			</div>
 			<ul class="b-main-menu">
 				<li><a href="#" class="b-go" data-delay="400" data-duration="500" data-block=".b-about-slide"><span class="b-line"></span>О нас</a></li>
-				<li><a href="#" class="b-go" data-delay="400" data-duration="600" data-offset="80" data-block=".b-what-we-do"><span class="b-line"></span>Услуги</a></li>
+				<li><a href="#" class="b-go" data-delay="400" data-duration="600" data-offset="<?=(($mobile)?0:80)?>" data-block=".b-what-we-do"><span class="b-line"></span>Услуги</a></li>
 				<li><a href="#" class="b-go" data-delay="400" data-block=".b-work"><span class="b-line"></span>Портфолио</a></li>
 				<li><a href="#" class="b-go" data-delay="400" data-block=".b-callback" data-focus="1"><span class="b-line"></span>Контакты</a></li>
 			</ul>

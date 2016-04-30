@@ -6,8 +6,11 @@ $(document).ready(function(){
         backWidth,
         backHeight,
         isMobile = device.mobile(),
+        isTablet = device.tablet(),
         rotation = 0,
-        prevHeight = 10000;
+        prevHeight = 10000,
+        prevWidth = 1920,
+        firstTog = false;
 
     // isMobile = true;
 
@@ -32,19 +35,30 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+        isTablet = ( (myWidth < 1024) || device.tablet() )? true : false;
+        isMobile = ( (myWidth < 768) || device.mobile() )? true : false;
+
+        if( prevWidth >= 1024 && isTablet ) firstTog = false;
+
         myWidth = (myWidth < 1000)?1000:myWidth;
 
-        if( 1920/899 > myWidth/myHeight  ){
-            backHeight = myHeight;
-            backWidth = myHeight*1920/899;
+        if( isMobile || isTablet ){
+            if( 1 > myWidth/myHeight  ){
+                backHeight = myHeight;
+                backWidth = myHeight;
+            }else{
+                backWidth = myWidth;
+                backHeight = myWidth;
+            }
         }else{
-            backWidth = myWidth;
-            backHeight = myWidth*899/1920;
-        }
+            if( 1920/899 > myWidth/myHeight  ){
+                backHeight = myHeight;
+                backWidth = myHeight*1920/899;
+            }else{
+                backWidth = myWidth;
+                backHeight = myWidth*899/1920;
+            }
 
-        if( isMobile ){
-
-        }else{
             $(".b-main-slide").css("height", myHeight);
             $(".b-main-slide .b-big-logo").css({
                 "width" : myWidth*0.51,
@@ -67,7 +81,7 @@ $(document).ready(function(){
 
         radius = myWidth*250/1920;
 
-        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 ) firstRender();
+        if( Math.abs(myWidth/myHeight-rotation) > 0.5 || myHeight-prevHeight < 0 || !firstTog ) firstRender();
 
         prevHeight = myHeight;
         rotation = myWidth/myHeight;
@@ -77,7 +91,8 @@ $(document).ready(function(){
         // $(".b-work").css("min-height", min_height);
     }
     function firstRender() {
-        if( isMobile ){
+        if( isMobile || isTablet ){
+            firstTog = true;
             $(".b-main-slide").css("height", myHeight);
             $(".b-main-slide .b-big-logo").css({
                 "width" : myWidth*0.51,

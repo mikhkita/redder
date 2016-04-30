@@ -118,7 +118,7 @@ input:-moz-placeholder {
 			background-position: 50% 0%;
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-image: url('../i/back-1.jpg');
+			background-image: url('../i/back-1-mobile.jpg');
 		}
 		.b-back-cont .b-back-svg{
 			position: absolute;
@@ -231,10 +231,10 @@ input:-moz-placeholder {
 							top: -14px;
 						}
 						.b-main-slide .b-head .b-top-buttons a.b-menu-butt:hover span:after{
-							top: -9px;
+							top: -14px;
 						}
 						.b-main-slide .b-head .b-top-buttons a.b-menu-butt.opened span:after{
-							top: -8px;
+							top: -16px;
 							-webkit-transform: rotate(45deg);
 							-moz-transform: rotate(45deg);
 							-ms-transform: rotate(45deg);
@@ -245,7 +245,7 @@ input:-moz-placeholder {
 							top: 14px;
 						}
 						.b-main-slide .b-head .b-top-buttons a.b-menu-butt:hover span:before{
-							top: 9px;
+							top: 14px;
 						}
 						.b-main-slide .b-head .b-top-buttons a.b-menu-butt.opened span:before{
 							-webkit-transform: rotate(-45deg);
@@ -253,7 +253,7 @@ input:-moz-placeholder {
 							-ms-transform: rotate(-45deg);
 							-o-transform: rotate(-45deg);
 							transform: rotate(-45deg);
-							top: 8px;
+							top: 15px;
 						}
 		.b-main-slide .b-big-logo{
 			display: inline-block;
@@ -286,21 +286,22 @@ input:-moz-placeholder {
 		position: absolute;
 		right: 0px;
 		top: 50%;
-		margin-top: -150px;
+		margin-top: -250px;
 	}
 		.b-main-menu li{
 			opacity: 0;
-			margin-bottom: 25px;
+			margin-bottom: 50px;
 			text-align: right;
+			margin-right: 50px;
 			-webkit-transform: translateY(30px);
-			   -moz-transform: translateY(30px);
-			    -ms-transform: translateY(30px);
-			   	 -o-transform: translateY(30px);
-					transform: translateY(30px);
+			-moz-transform: translateY(30px);
+			-ms-transform: translateY(30px);
+			-o-transform: translateY(30px);
+			transform: translateY(30px);
 		}
 			.b-main-menu a{
 				color: #262626;
-				font-size: 50px;
+				font-size: 70px;
 				position: relative;
 			}
 			.b-main-menu a .b-line{
@@ -310,6 +311,7 @@ input:-moz-placeholder {
 				font-size: 0px;
 				width: 0px;
 				height: 5px;
+				display: none;
 			}
 			/*.b-main-menu a:hover .b-line{
 				width: 2000px;
@@ -837,6 +839,8 @@ a.b-orange-butt{
 	.b-work ul.b-work-list{
 		width: 100%;
 		text-align: center;
+		padding-left: 8px;
+		margin-left: 0px;
 	}
 		.b-work ul.b-work-list li{
 			width: 303px;
